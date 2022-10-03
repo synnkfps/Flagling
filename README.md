@@ -1,5 +1,5 @@
 # Flagling
-A basic country flag guessing game, inspired by [Flagle](https://flagle.io/)
+A basic country flag guessing game, inspired by [Flagle](https://flagle.io/) <br>
 
 ## Features
 - [X] Many Flags & Countries
