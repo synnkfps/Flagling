@@ -1,14 +1,38 @@
-header {
-    text-align: center;
-    text-rendering: optimizeSpeed;
-    text-shadow: 3;
-    font-weight: 900;
-    font-size: 27px;
-    font-family: consolas, monospace;
-
+.header {
+    overflow: auto;
+    padding: 0px;
     width: 100%;
-    height: 30px;
-    border-radius: 4px;
+    height: 100%;
+    display: flex;
+    -moz-box-pack: start;
+    justify-content: flex-start;
+    -moz-box-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rows {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
+}
+
+.help-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.help {
+    background: none;
+    border: medium none;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.title {
+    font-family: 'consolas', monospace, serif;
+    display: block;
+    font-size: 4rem;
 }
 
 .others {
@@ -27,8 +51,9 @@ hr {
     align-items: center;
     display: flex;
     margin-bottom: 0px;
-    width: var(--center-width,652px);
+    width: var(--center-width,100%);
 }
+
 
 .game {
     text-align: center;
@@ -42,6 +67,12 @@ hr {
     font-weight: bold;
 }
 
+svg {
+    display: flex;
+    width: 25px;
+    height: 25px;
+}
+
 img {
     border-width: 2px;
     border-style: solid;
@@ -49,7 +80,7 @@ img {
     border-radius: 20px;
     margin-top: -10px;
     max-width: fit-content;
-    height: 150px;
+    max-height: fit-content;
 }
 
 .guesses {
@@ -59,5 +90,11 @@ img {
 }
 
 input {
+    outline-width: 1px;
+    outline-style: solid;
+    text-decoration-style: double;
+    enable-background: new;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 12px;
     width: 300px;
 }
